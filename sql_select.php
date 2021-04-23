@@ -1,9 +1,9 @@
 <?php
-    //Section A - Connecting to the database
+    //Section A - Connecting to the database.
     $pdo = new PDO("mysql:host=localhost; dbname=pawszone", "pz_admin", "ABCD");
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    //Section B - SELECT all rows from pets
+    //Section B - SELECT all rows from pets.
     $sql = "SELECT petname, owner FROM pets";
     $stmt = $pdo->prepare($sql);
 
